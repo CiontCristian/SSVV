@@ -20,6 +20,7 @@ public class TestApp {
     @AfterClass
     public static  void delete(){
         studentXmlRepo.delete("1");
+        studentXmlRepo.delete("2");
     }
 
     @Test
@@ -72,7 +73,8 @@ public class TestApp {
 
     @Test
     public void test9(){
-        int result = testService.saveStudent("1","Timo",932);
+        testService.saveStudent("2","Timo",932);
+        int result = testService.saveStudent("2","Vali",932);
         assertEquals(0, result);
     }
 
