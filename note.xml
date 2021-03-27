@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entitati>
+    <nota IDStudent="5" IDTema="4">
+        <Nota>8.0</Nota>
+        <SaptamanaPredare>14</SaptamanaPredare>
+        <Feedback>Foarte jo</Feedback>
+    </nota>
+    <nota IDStudent="1" IDTema="1">
+        <Nota>10.0</Nota>
+        <SaptamanaPredare>7</SaptamanaPredare>
+        <Feedback>done</Feedback>
+    </nota>
+    <nota IDStudent="13" IDTema="13">
+        <Nota>4.0</Nota>
+        <SaptamanaPredare>5</SaptamanaPredare>
+        <Feedback>Nu e elev bun timotei cal</Feedback>
+    </nota>
+    <nota IDStudent="1" IDTema="2">
+        <Nota>7.5</Nota>
+        <SaptamanaPredare>9</SaptamanaPredare>
+        <Feedback>done</Feedback>
+    </nota>
+</Entitati>
