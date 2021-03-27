@@ -1,22 +1,25 @@
-import domain.Student;
-import org.junit.Before;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import repository.NotaXMLRepository;
 import repository.StudentXMLRepository;
-import repository.TemaXMLRepository;
 import service.Service;
 import validation.StudentValidator;
-import validation.Validator;
 
 import static org.junit.Assert.*;
 
 public class TestApp {
-    private Service testService;
+    private static Service testService;
+    private static StudentXMLRepository studentXmlRepo;
 
-    @Before
-    public void setup(){
-        StudentXMLRepository studentXmlRepo = new StudentXMLRepository(new StudentValidator(), "studentTest.xml");
+    @BeforeClass
+    public static void setup(){
+        studentXmlRepo = new StudentXMLRepository(new StudentValidator(), "studentTest.xml");
         testService = new Service(studentXmlRepo, null, null);
+    }
+
+    @AfterClass
+    public static  void delete(){
+        studentXmlRepo.delete("1");
     }
 
     @Test
@@ -64,6 +67,12 @@ public class TestApp {
     @Test
     public void test8(){
         int result = testService.saveStudent(null,"",109);
+        assertEquals(0, result);
+    }
+
+    @Test
+    public void test9(){
+        int result = testService.saveStudent("1","Timo",932);
         assertEquals(0, result);
     }
 
