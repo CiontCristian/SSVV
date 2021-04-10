@@ -47,15 +47,16 @@ public class TestAddAssignmentWBT {
 
     @Test
     public void test4(){
-        Tema tema2 = new Tema("2","Tema2", 10, 4);
-        Tema result  = temaXMLRepository.save(tema2);
+        Tema tema3 = new Tema("3","Tema3", 10, 4);
+        temaXMLRepository.save(tema3);
+        Tema result  = temaXMLRepository.save(tema3);
         assertNull(result);
     }
 
     @Test
     public void test5(){
-        Tema tema2 = new Tema("3","Tema3", 2, 4);
-        Tema result  = temaXMLRepository.save(tema2);
+        Tema tema4 = new Tema("4","Tema4", 2, 4);
+        Tema result  = temaXMLRepository.save(tema4);
         assertNull(result);
     }
 }
