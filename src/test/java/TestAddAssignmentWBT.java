@@ -25,6 +25,7 @@ public class TestAddAssignmentWBT {
     public static  void delete(){
         temaXMLRepository.delete("1");
         temaXMLRepository.delete("2");
+        temaXMLRepository.delete("3");
     }
     @Test
     public void test1(){
