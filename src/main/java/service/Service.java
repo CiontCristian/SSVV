@@ -46,7 +46,7 @@ public class Service {
         if (result == null) {
             return 0;
         }
-        return 1;
+        return 1; // ok
     }
 
     public int saveNota(String idStudent, String idTema, double valNota, int predata, String feedback) {
@@ -65,9 +65,9 @@ public class Service {
             Nota result = notaXmlRepo.save(nota);
 
             if (result == null) {
-                return 1;
+                return 0;
             }
-            return 0;
+            return 1; // ok
         }
     }
 
