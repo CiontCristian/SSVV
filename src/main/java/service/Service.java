@@ -12,6 +12,8 @@ import java.time.LocalDate;
 import java.time.temporal.WeekFields;
 import java.util.Locale;
 
+import static java.lang.Integer.max;
+
 public class Service {
     private StudentXMLRepository studentXmlRepo;
     private TemaXMLRepository temaXmlRepo;
@@ -59,7 +61,7 @@ public class Service {
             if (predata - deadline > 2) {
                 valNota =  1;
             } else {
-                valNota =  valNota - 2.5 * (predata - deadline);
+                valNota =  valNota - 2.5 * max((predata - deadline), 0);
             }
             Nota nota = new Nota(new Pair(idStudent, idTema), valNota, predata, feedback);
             Nota result = notaXmlRepo.save(nota);
