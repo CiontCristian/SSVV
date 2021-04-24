@@ -23,10 +23,10 @@ public class Nota implements HasID<Pair<String, String>> {
         return Double.compare(nota1.nota, nota) == 0 && saptamanaPredare == nota1.saptamanaPredare && idNota.equals(nota1.idNota) && feedback.equals(nota1.feedback);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idNota, nota, saptamanaPredare, feedback);
-    }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(idNota, nota, saptamanaPredare, feedback);
+//    }
 
     @Override
     public Pair<String, String> getID() { return idNota; }
