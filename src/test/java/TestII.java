@@ -64,7 +64,7 @@ public class TestII {
         Student student  = new Student("2", "Jordan", 932);
         Tema tema  = new Tema("2", "SSVV Lab 3 Take Home", 8, 6);
         Nota nota = new Nota(new Pair("2", "2"), 7.5, 8, "Tema stearsa dar ai punctaj pentru efort!");
-        when(notaXMLRepository.save(nota)).thenReturn(nota);
+        when(notaXMLRepository.save(Mockito.any())).thenReturn(nota);
         when(studentXMLRepository.findOne("2")).thenReturn(student);
         when(temaXMLRepository.findOne("2")).thenReturn(tema);
         assertEquals(1, service.saveNota("2", "2", 7.5, 8, "Tema stearsa dar ai punctaj pentru efort!"));
